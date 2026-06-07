@@ -2,4 +2,26 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Cyberpunk Neon Palette -->
+    <color name="neon_purple">#BF5AF2</color>
+    <color name="neon_pink">#FF375F</color>
+    <color name="neon_blue">#0A84FF</color>
+    <color name="neon_cyan">#64D2FF</color>
+    <color name="neon_green">#30D158</color>
+    <color name="neon_orange">#FF9F0A</color>
+    <color name="neon_red">#FF453A</color>
+    <color name="neon_yellow">#FFD60A</color>
+
+    <!-- Backgrounds -->
+    <color name="cyber_bg_dark">#000000</color>
+    <color name="cyber_card_bg">#1C1C1E</color>
+
+    <!-- Glassmorphism -->
+    <color name="glass_white">#26FFFFFF</color>
+    <color name="glass_border">#4DFFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_bright">#FFFFFF</color>
+    <color name="text_dim">#8E8E93</color>
 </resources>

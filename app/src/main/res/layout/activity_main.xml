@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F7FA"
+    android:background="@drawable/bg_gradient"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -18,9 +18,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="Service Lab Demo"
+            app:title="CYBER CORE INTERFACE"
             app:titleCentered="true"
-            app:titleTextColor="#2D3748" />
+            app:titleTextColor="@color/neon_pink"
+            app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -33,109 +34,136 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp">
 
-            <!-- Status Card -->
+            <!-- Cyber Status Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp"
-                app:strokeWidth="0dp">
+                android:layout_marginBottom="32dp"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="24dp"
+                app:strokeWidth="3dp"
+                app:strokeColor="@color/neon_cyan"
+                app:cardBackgroundColor="#1AFFFFFF"> <!-- Glassmorphism effect -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:padding="24dp"
-                    android:background="#FFFFFF">
+                    android:padding="40dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Real-time Status"
+                        android:text="SYSTEM TELEMETRY"
                         android:textAllCaps="true"
-                        android:textColor="#A0AEC0"
+                        android:textColor="@color/glass_border"
                         android:textSize="12sp"
                         android:textStyle="bold"
-                        android:letterSpacing="0.1" />
+                        android:letterSpacing="0.4" />
 
                     <TextView
                         android:id="@+id/statusTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Idle"
+                        android:layout_marginTop="24dp"
+                        android:text="STABLE"
                         android:textAlignment="center"
-                        android:textColor="#2D3748"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
+                        android:textColor="@color/neon_cyan"
+                        android:textSize="42sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:shadowColor="@color/neon_blue"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="15" />
 
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Action Buttons Area -->
+            <!-- Command Terminal -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:text="Service Orchestration"
-                android:textColor="#4A5568"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="20dp"
+                android:text="COMMAND TERMINAL"
+                android:textColor="@color/neon_pink"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:letterSpacing="0.25" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnBackgroundTask"
-                style="@style/Widget.Material3.Button.TonalButton"
+                style="@style/Widget.Material3.Button"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:text="Start Background Task"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                app:cornerRadius="12dp"
-                app:icon="@android:drawable/ic_menu_rotate" />
+                android:layout_height="84dp"
+                android:layout_marginBottom="18dp"
+                android:text="INVOKE BACKGROUND"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="24dp"
+                app:icon="@android:drawable/ic_menu_rotate"
+                app:backgroundTint="@color/neon_blue"
+                app:iconSize="32dp"
+                app:rippleColor="#80FFFFFF"
+                app:elevation="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnForegroundService"
                 style="@style/Widget.Material3.Button"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:text="Start Foreground Service"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                app:cornerRadius="12dp"
-                app:icon="@android:drawable/ic_dialog_info" />
+                android:layout_height="84dp"
+                android:layout_marginBottom="18dp"
+                android:text="ENGAGE FOREGROUND"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="24dp"
+                app:icon="@android:drawable/ic_dialog_info"
+                app:backgroundTint="@color/neon_green"
+                app:iconSize="32dp"
+                app:rippleColor="#80FFFFFF"
+                app:elevation="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnBindService"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.Material3.Button"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginBottom="12dp"
-                android:text="Bind to Service"
-                android:textAllCaps="false"
-                android:textSize="16sp"
-                app:cornerRadius="12dp"
-                app:icon="@android:drawable/ic_menu_share" />
+                android:layout_height="84dp"
+                android:layout_marginBottom="18dp"
+                android:text="ESTABLISH NEURAL LINK"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="24dp"
+                app:icon="@android:drawable/ic_menu_share"
+                app:backgroundTint="@color/neon_purple"
+                app:iconSize="32dp"
+                app:rippleColor="#80FFFFFF"
+                app:elevation="8dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUnbindService"
-                style="@style/Widget.Material3.Button.TextButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:text="Unbind Service"
-                android:textAllCaps="false"
-                android:textColor="#E53E3E"
-                android:textSize="16sp"
+                android:layout_height="84dp"
+                android:text="ABORT CONNECTION"
+                android:textAllCaps="true"
+                android:textColor="@color/neon_red"
+                android:textSize="17sp"
+                android:textStyle="bold"
                 android:visibility="gone"
-                app:cornerRadius="12dp"
+                app:cornerRadius="24dp"
+                app:strokeColor="@color/neon_red"
+                app:strokeWidth="4dp"
                 app:icon="@android:drawable/ic_menu_close_clear_cancel"
-                app:iconTint="#E53E3E" />
+                app:iconTint="@color/neon_red"
+                app:iconSize="32dp" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
