@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="quest_gold">#FFD700</color>
+    <color name="quest_bg">#121212</color>
+    <color name="quest_card">#1E1E1E</color>
+    <color name="quest_accent">#BB86FC</color>
+    <color name="quest_progress_start">#69F0AE</color>
+    <color name="quest_progress_end">#00E676</color>
+</resources>
