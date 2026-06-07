@@ -2,10 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="quest_gold">#FFD700</color>
-    <color name="quest_bg">#121212</color>
-    <color name="quest_card">#1E1E1E</color>
-    <color name="quest_accent">#BB86FC</color>
-    <color name="quest_progress_start">#69F0AE</color>
-    <color name="quest_progress_end">#00E676</color>
+    <color name="gym_black_start">#1A1A1A</color>
+    <color name="gym_black_end">#000000</color>
+    <color name="gym_neon_green">#CCFF00</color>
+    <color name="gym_electric_blue">#00CCFF</color>
+    <color name="gym_hot_pink">#FF007F</color>
+    <color name="gym_card_bg">#252525</color>
+    <color name="gym_text_gray">#AAAAAA</color>
+    <color name="gym_white">#F5F5F5</color>
 </resources>

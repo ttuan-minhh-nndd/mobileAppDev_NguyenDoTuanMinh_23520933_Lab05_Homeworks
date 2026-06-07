@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_gradient_black"
+    tools:context="com.example.fitnesstracker.MainActivity">
 
     <TextView
         android:id="@+id/tvQuestTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="FITNESS QUEST"
-        android:textColor="#FFD700"
-        android:textSize="24sp"
+        android:layout_marginTop="32dp"
+        android:letterSpacing="0.1"
+        android:text="ELITE FITNESS"
+        android:textColor="@color/gym_neon_green"
+        android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +24,9 @@
     <ProgressBar
         android:id="@+id/stepProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="40dp"
         android:indeterminate="false"
         android:max="10000"
         android:progress="0"
@@ -34,42 +35,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvQuestTitle" />
 
-    <TextView
-        android:id="@+id/tvStepCount"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="48sp"
-        android:textStyle="bold"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/stepProgressBar"
         app:layout_constraintEnd_toEndOf="@id/stepProgressBar"
         app:layout_constraintStart_toStartOf="@id/stepProgressBar"
-        app:layout_constraintTop_toTopOf="@id/stepProgressBar" />
+        app:layout_constraintTop_toTopOf="@id/stepProgressBar">
 
-    <TextView
-        android:id="@+id/tvStepLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="STEPS"
-        android:textColor="#BBBBBB"
-        app:layout_constraintEnd_toEndOf="@id/tvStepCount"
-        app:layout_constraintStart_toStartOf="@id/tvStepCount"
-        app:layout_constraintTop_toBottomOf="@id/tvStepCount" />
+        <TextView
+            android:id="@+id/tvStepCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@color/gym_white"
+            android:textSize="64sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStepLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.2"
+            android:text="STEPS"
+            android:textColor="@color/gym_text_gray"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/statsContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/stepProgressBar">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
             <TextView
@@ -77,19 +86,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.0"
-                android:textColor="#FF5722"
-                android:textSize="18sp" />
+                android:textColor="@color/gym_hot_pink"
+                android:textSize="22sp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CALORIES"
-                android:textColor="#888888"
-                android:textSize="12sp" />
+                android:text="KCAL"
+                android:textColor="@color/gym_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="#333333" />
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
             <TextView
@@ -97,29 +114,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:textColor="#4CAF50"
-                android:textSize="18sp" />
+                android:textColor="@color/gym_electric_blue"
+                android:textSize="22sp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="POINTS"
-                android:textColor="#888888"
-                android:textSize="12sp" />
+                android:textColor="@color/gym_text_gray"
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
     <HorizontalScrollView
         android:id="@+id/badgeScroll"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="24dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:clipToPadding="false"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:scrollbars="none"
         app:layout_constraintTop_toBottomOf="@id/statsContainer">
         <LinearLayout
             android:id="@+id/badgeContainer"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:gravity="center_vertical"
             android:orientation="horizontal" />
     </HorizontalScrollView>
@@ -128,7 +149,7 @@
         android:id="@+id/aiSuggestionContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
