@@ -87,5 +87,3 @@ To launch and build either module inside Android Studio:
 1. Ensure your local environment parameters are aligned with standard Android SDK targets and Gradle configurations specified within the workspace build configurations.
 2. In order for the advanced fitness engine to synthesize exercise suggestions, add a valid API authentication key within the app configuration variables to grant `GeminiAiClient` access to remote server communication.
 3. Open either `ServiceDemoProject` or `FitnessTrackerApp` subfolders directly as individual root projects in Android Studio to populate proper build tree modules and auto-generate requisite lifecycle elements.
-
-```
